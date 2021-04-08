@@ -11,11 +11,9 @@ function mergeSortedArrays(arr1, arr2){
     if(arr1.length===0){
         return arr2;
     }
-
     if(arr2.length===0){
         return arr1;
     }
-
     while(arr1Item || arr2Item){
         if(!arr2Item || arr1Item < arr2Item){
            mergedArray.push(arr1Item);
