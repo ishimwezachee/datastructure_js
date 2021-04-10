@@ -21,14 +21,34 @@ class HashTable{
 
     get(key){
         let address = this._hash(key);
+        const currentBucket = this.data[address];
+        if(currentBucket.length){
+           for(let i=0; i<currentBucket.length;i++){
+               if(currentBucket[i][0]===key){
+                   return currentBucket[i][1]
+               }
+           }
+        }
+        return undefined
     }
+
+    keys(){
+        const keysArray = [];
+        for(let i =0; i<this.data.length;i++){
+            if(this.data[i]){
+                keysArray.push(this.data[i][0][0])
+            }
+        }
+        return keysArray
+    }
+        
 }
 
 const myHashTable = new HashTable(50);
 
+myHashTable.set("grapes",1000);
+myHashTable.set('apples',54);
+myHashTable.set('oranges',200)
 
-myHashTable.set('grapes',100000);
-// myHashTable.get('grapes')
-
-console.log(myHashTable)
+console.log(myHashTable.keys())
 
