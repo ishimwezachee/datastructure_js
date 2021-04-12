@@ -57,7 +57,7 @@ console.log(myHashTable.keys())
 /// Keys without collission myHashTable.keys()
 
 
-keys() {
+ function Methodkeys() {
     if (!this.data.length) {
       return undefined
     }
@@ -68,7 +68,7 @@ keys() {
         if (this.data[i] && this.data[i].length) {
           // but also loop through all the potential collisions
           if (this.data.length > 1) {
-            for (let j = 0; j < this.data[i].length; j++) {
+            for (let j =0; j < this.data[i].length; j++) {
               result.push(this.data[i][j][0])
             }
           } else {
