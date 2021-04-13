@@ -30,13 +30,31 @@ class LinkedList {
     this.length++;
     return this;
   }
+
+  PrintList(){
+    const arr = [];
+    let headNode = this.head;
+
+    while(headNode !== null){
+      arr.push(headNode.value);
+      headNode = headNode.next;
+    }
+    return arr
+
+  }
+
 }
 
 const myLinkedList = new  LinkedList(10);
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.append(20);
-myLinkedList.prepend(1)
+myLinkedList.prepend(1);
+// myLinkedList.PrintList();
 
-console.log(myLinkedList)
+console.log(myLinkedList.PrintList())
+
+// myLinkedList.insert(2,99);
+
+// console.log(myLinkedList)
 
