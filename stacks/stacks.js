@@ -1,3 +1,5 @@
+// LinkedList 
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -20,6 +22,7 @@ class Stack {
     if (this.length === 0) {
       this.top = newNode;
       this.bottom = newNode;
+      this.length =1;
     } else {
       const holdingPointer = this.top;
       this.top = newNode;
@@ -44,7 +47,37 @@ class Stack {
 
 const myStack = new Stack();
 
-myStack.push("google");
-myStack.push("youtube");
-myStack.push("twitter");
-console.log(myStack);
+// myStack.push("google");
+// myStack.push("youtube");
+// myStack.push("twitter");
+// console.log(myStack);
+
+
+// Arrays 
+
+class StackArray {
+  constructor(){
+    this.data = [];
+  }
+  peek(){
+    return this.data[this.data.length-1];
+  }
+  push(value){
+   this.data.push(value)
+    return this
+  }
+  pop(){
+    this.data.pop();
+    return this;
+  }
+
+}
+
+const arrayStack = new StackArray();
+
+arrayStack.push('google');
+arrayStack.push('youtube');
+arrayStack.push('udemy');
+arrayStack.pop();
+
+console.log(arrayStack)
