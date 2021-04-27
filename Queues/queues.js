@@ -45,8 +45,8 @@ class Queue{
 
 const myQueue = new Queue();
 
-myQueue.enqueue('JOy');
-myQueue.enqueue("Matt");
+myQueue.enqueue('Joy');
+// myQueue.enqueue("Matt");
 myQueue.dequeue()
 
 console.log(myQueue)
