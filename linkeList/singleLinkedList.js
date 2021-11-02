@@ -1,10 +1,12 @@
 class Node {
   constructor(value) {
-    (this.value = value), (this.next = null);
+    this.value = value, 
+     this.next = null;
   }
 }
 
 class LinkedList {
+  // Initializing the head and declare both tail and length
   constructor(value) {
     this.head = {
       value: value,
