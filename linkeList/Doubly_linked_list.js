@@ -6,6 +6,7 @@ class Node {
   }
 }
 class DoublyLinkedList {
+  // initialize head, tail and length; 
   constructor(value) {
     this.head = {
       value: value,
@@ -15,6 +16,7 @@ class DoublyLinkedList {
     this.tail = this.head;
     this.length = 1;
   }
+  
   append(value) {
     let newNode = new Node(value);
     newNode.prev = this.tail;
@@ -23,6 +25,7 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+  
   prepend(value) {
     let newNode = new Node(value);
     this.head.prev = newNode;
@@ -31,6 +34,7 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+  
   printList() {
     let arr = [];
     let currentNode = this.head;
